@@ -1,6 +1,6 @@
 :root {
-    --color-primary: #2584ff;
-    --color-secondary: #00d9ff;
+    --color-primary: #00d9ff;
+    --color-secondary: #2584ff;
     --color-accent: #ff3400;
     --color-headings: #1b0760;
     --color-body: #918ca4;
@@ -212,13 +212,18 @@ a {
     transition: background-color 0.5s;
 }
 
+.btn--stretched {
+    padding-left: 6rem;
+    padding-right: 6rem;
+}
+
 .btn--primary {
     background-color: var(--color-primary);
     color: #fff;
 }
 
 .btn--primary:hover {
-    background-color: #7b59f7;
+    background-color: #00e8eb;
 }
 
 .btn--secondary {
@@ -498,5 +503,46 @@ a {
     }
     .testimonial .quote {
         margin-left: 6rem;
+    }
+}
+
+
+/* Callouts */
+
+.callout {
+    padding: 4rem;
+    border-radius: 5px;
+}
+
+.callout--primary {
+    background: var(--color-secondary);
+    color: #fff;
+}
+
+.callout__heading {
+    color: #fff;
+    margin-top: 0%;
+    font-size: 3rem;
+}
+
+.callout .btn {
+    justify-self: center;
+    align-self: center;
+}
+
+.callout__content {
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .callout .grid--1x2 {
+        grid-template-columns: 1fr auto;
+    }
+    .callout__content {
+        text-align: left;
+    }
+    .callout .btn {
+        justify-self: center;
+        margin: 0 2rem;
     }
 }
